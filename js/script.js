@@ -49,4 +49,29 @@ function eraseText() {
 
 window.onload = typeWriter;
 
+   }
+   
+}
+
+
+// ====== SOUND SYSTEM ======
+const menuOpenSound = new Audio("/audio/menu-open.mp3");
+const menuCloseSound = new Audio("/audio/menu-close.mp3");
+
+// Play sound saat menu dibuka
+function hamburg(){
+    const navbar = document.querySelector(".dropdown");
+    navbar.style.transform = "translateY(0px)";
+    menuOpenSound.currentTime = 0;
+    menuOpenSound.play();
+}
+
+// Play sound saat menu ditutup
+function cancel(){
+    const navbar = document.querySelector(".dropdown");
+    navbar.style.transform = "translateY(-500px)";
+    menuCloseSound.currentTime = 0;
+    menuCloseSound.play();
+}
+
 // Subscrbe YouTube ReyyKou
